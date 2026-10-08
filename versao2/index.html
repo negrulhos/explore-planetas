@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a Lua, Marte, Júpiter e Saturno e descubra um pouco da história da exploração espacial.">
+  <title>Explore o Universo</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <h1 class="marca"><a href="#inicio">Explore <span>o Universo</span></a></h1>
+      <nav aria-label="Navegação principal">
+        <ul class="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#exploracao">Exploração</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="destaque container" id="inicio" aria-labelledby="titulo-destaque">
+      <div class="destaque-texto">
+        <p class="etiqueta">Um convite à descoberta</p>
+        <h2 id="titulo-destaque">Explore além<br>da <span>Terra.</span></h2>
+        <p class="introducao">Há um Universo de descobertas lá fora. Conheça outros mundos e as missões que nos ajudam a ir cada vez mais longe.</p>
+        <a class="botao" href="#destinos">Conheça os destinos <span aria-hidden="true">↗</span></a>
+      </div>
+      <figure class="destaque-imagem">
+        <img src="img/lua.webp" alt="Composição mostrando a Lua em primeiro plano e a Terra ao fundo." width="1000" height="750">
+        <figcaption>Terra e Lua <span>O começo da jornada</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="destinos secao container" id="destinos" aria-labelledby="titulo-destinos">
+      <p class="etiqueta">01 / Conheça nossa vizinhança</p>
+      <h2 id="titulo-destinos">Destinos no Universo</h2>
+      <p class="descricao-secao">Quatro mundos do Sistema Solar. Quatro motivos para olhar para o céu.</p>
+
+      <div class="filtros-destinos" role="group" aria-label="Filtrar destinos por categoria">
+
+        <button data-filtro="todos" type="button" aria-pressed="true" class="filtro-ativo">Todos</button>
+
+        <button data-filtro="satelite" type="button" aria-pressed="false">Satelites</button>
+
+        <button data-filtro="rochoso" type="button" aria-pressed="false">Rochoso</button>
+
+        <button data-filtro="gasoso"type="button" aria-pressed="false">Gasoso</button>
+      </div>
+
+      <div class="grade-destinos">
+        <article class="card-destino" data-categoria="satelite">
+          <img src="img/lua.webp" alt="Lua com áreas claras e escuras, em uma composição com a Terra ao fundo." width="760" height="570">
+          <div class="card-conteudo">
+            <p class="categoria">Satélite natural</p>
+            <h3>Lua</h3>
+            <p class="descricao-card">Nossa vizinha no espaço tem uma superfície marcada por crateras. Foi o primeiro mundo além da Terra visitado por seres humanos.</p>
+
+            <!-- Atributos aria-* 
+             Recursos importantes para sinalizar/avisar ferramentas/tecnologias
+             de acessibilidade sobre diferentes estados dos elementos da página -->
+            <div class="acoes-card">
+              <button type="button" class="botao-curiosidade" aria-expanded="false" aria-controls="S-lua">
+                Ver curiosidades
+              </button>
+              <button type="button" class="botao-favorito" aria-pressed="false">
+                ☆ Favoritar
+              </button>
+            </div>
+
+            <p class="curiosidade" id="curiosidade-lua" hidden>
+              A Lua leva aproximadamente 27 dias para dar uma volta ao redor da Terra.
+            </p>
+          </div>
+        </article>
+
+        <article class="card-destino" data-categoria="rochoso">
+          <img src="img/marte.jpg" alt="Marte visto do espaço, com superfície em tons avermelhados." width="506" height="480">
+          <div class="card-conteudo">
+            <p class="categoria">Planeta rochoso</p>
+            <h3>Marte</h3>
+            <p class="descricao-card">O planeta vermelho abriga vulcões e grandes cânions. Robôs exploram seu solo em busca de pistas sobre o passado do planeta.</p>
+
+            <div class="acoes-card">
+              <button type="button" class="botao-curiosidade" aria-expanded="false" aria-controls="curiosidade-marte">
+                Ver curiosidades
+              </button>
+              <button type="button" class="botao-favorito" aria-pressed="false">
+                ☆ Favoritar
+              </button>
+            </div>
+
+            <p class="curiosidade" id="curiosidade-marte" hidden>
+              Um dia em Marte dura cerca de 24 horas e 40 minutos.
+            </p>
+          </div>
+        </article>
+
+        <article class="card-destino" data-categoria="gasoso">
+          <img src="img/jupiter.jpg" alt="Júpiter com faixas de nuvens e uma grande tempestade oval." width="750" height="750">
+          <div class="card-conteudo">
+            <p class="categoria">Gigante gasoso</p>
+            <h3>Júpiter</h3>
+            <p class="descricao-card">O maior planeta do Sistema Solar possui faixas de nuvens e enormes tempestades, como a famosa Grande Mancha Vermelha.</p>
+            <div class="acoes-card">
+              <button type="button" class="botao-curiosidade" aria-expanded="false" aria-controls="curiosidade-jupiter">
+                Ver curiosidades
+              </button>
+              <button type="button" class="botao-favorito" aria-pressed="false">
+                ☆ Favoritar
+              </button>
+            </div>
+            <p class="curiosidade" id="curiosidade-jupiter" hidden>
+              Júpiter leva cerca de 12 anos terrestres para completar uma volta ao redor do Sol.
+            </p>
+          </div>
+        </article>
+
+        <article class="card-destino" data-categoria="gasoso">
+          <img src="img/saturno.jpg" alt="Saturno envolvido por seus amplos anéis, contra o fundo escuro do espaço." width="960" height="320">
+          <div class="card-conteudo">
+            <p class="categoria">Gigante gasoso</p>
+            <h3>Saturno</h3>
+            <p class="descricao-card">Seus anéis são formados por incontáveis fragmentos de gelo e rocha. Esse gigante tem luas que também despertam nossa curiosidade.</p>
+
+            <div class="acoes-card">
+              <button type="button" class="botao-curiosidade" aria-expanded="false" aria-controls="curiosidade-saturno">
+                Ver curiosidades
+              </button>
+              <button type="button" class="botao-favorito" aria-pressed="false">
+                ☆ Favoritar
+              </button>
+            </div>
+            <p class="curiosidade" id="curiosidade-saturno" hidden>
+              Saturno leva aproximadamente 29 anos terrestres para completar uma volta ao redor do Sol.
+            </p>
+
+          </div>
+        </article>
+      </div>
+      <p class="nota">Imagens ilustrativas dos destinos, sem escala de tamanho ou distância entre eles.</p>
+    </section>
+
+    <section class="exploracao secao container" id="exploracao" aria-labelledby="titulo-exploracao">
+      <div>
+        <p class="etiqueta">02 / Ciência que vai mais longe</p>
+        <h2 id="titulo-exploracao">Toda descoberta começa com uma pergunta.</h2>
+        <p>Como são os outros mundos? Sondas, robôs e astronautas levam essa curiosidade para além da Terra. Cada missão traz imagens e dados que ajudam a entender nosso lugar no Universo.</p>
+      </div>
+      <ol class="missoes" aria-label="Marcos da exploração espacial">
+        <li><span class="ano">1969</span><div><h3>Apollo 11</h3><p>Os primeiros passos humanos na superfície da Lua.</p></div></li>
+        <li><span class="ano">1997</span><div><h3>Cassini-Huygens</h3><p>O início de uma viagem para estudar Saturno, seus anéis e suas luas.</p></div></li>
+        <li><span class="ano">2012</span><div><h3>Curiosity</h3><p>Um laboratório sobre rodas chega a Marte para investigar seu ambiente no passado.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="sobre secao container" id="sobre" aria-labelledby="titulo-sobre">
+      <p class="etiqueta">03 / Aprender explorando</p>
+      <h2 id="titulo-sobre">Um Universo para conhecer.</h2>
+      <p>Explore o Universo é um projeto educacional que une astronomia e desenvolvimento web. Um ponto de partida para aprender, fazer perguntas e construir novas descobertas em sala de aula.</p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div><p class="marca">Explore <span>o Universo</span></p><p class="texto-rodape">Projeto educacional · Feito para aprender e explorar.</p></div>
+      <p class="creditos">Imagens e referências: NASA.<br>
+        <a href="https://science.nasa.gov/moon/">Lua</a> ·
+        <a href="https://science.nasa.gov/mars/">Marte</a> ·
+        <a href="https://science.nasa.gov/jupiter/">Júpiter</a> ·
+        <a href="https://science.nasa.gov/saturn/">Saturno</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>  
+
+</body>
+</html>
